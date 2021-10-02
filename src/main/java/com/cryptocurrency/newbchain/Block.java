@@ -36,7 +36,7 @@ public class Block {
         return hash;
     }
 
-    private String calculateBlockHash() {
+    protected String calculateBlockHash() {
         String calculatedhash = DigitalFingerprint.applySha256( 
                 previousHash +
                 Long.toString(timeStamp) +
