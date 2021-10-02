@@ -1,16 +1,8 @@
 package com.cryptocurrency.newbchain;
 
-/**
- * Created by Ismail Lagouilly.
- */
-
-/* ********************************************************************************* */
-/*                                                                                   */
-/*  DisplayInformationImpl Class                                                     */
-/*                                                                                   */
-/*  Defines the methods required to display information.                             */
-/*                                                                                   */
-/* ********************************************************************************* */
+/**                                                                                 
+ *  Defines the methods required to display information.                             
+ */                                                                                   
 
 public class DisplayInformationImpl implements DisplayInformation {
 

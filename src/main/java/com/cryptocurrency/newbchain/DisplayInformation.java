@@ -1,17 +1,8 @@
 package com.cryptocurrency.newbchain;
 
-/**
-* Created by Ismail Lagouilly.
+/** 
+*  Describes the methods required to display information
 */
-
-/* ********************************************************************************* */
-/*                                                                                   */
-/*  DisplayInformation Interface                                                     */
-/*                                                                                   */
-/*  Describes the methods required to display information.                           */
-/*                                                                                   */
-/* ********************************************************************************* */
-
 public interface DisplayInformation {
 
     public void displayOpeningBanner();
