@@ -17,7 +17,7 @@ public class Block {
 	private String previousHash;
 	private String data; // data will be contain a summary of a transaction.
 	private long timeStamp; 
-    private int nonce;
+    private int nonce; // an arbitrary number (to iterate from) used in cryptography
 
 	public Block(String data, String previousHash) {
 		this.data = data;
@@ -25,16 +25,6 @@ public class Block {
 		this.timeStamp = new Date().getTime();
         this.hash = calculateBlockHash();
 	}
-
-    public String calculateBlockHash() {
-        String calculatedhash = DigitalFingerprint.applySha256( 
-                previousHash +
-                Long.toString(timeStamp) +
-                Integer.toString(nonce) +
-                data 
-                );
-        return calculatedhash;
-    }
 
     public String mineBlock(int prefix) {
         String prefixString = new String(new char[prefix]).replace('\0', '0');
@@ -44,5 +34,15 @@ public class Block {
             hash = calculateBlockHash();
         }
         return hash;
+    }
+
+    private String calculateBlockHash() {
+        String calculatedhash = DigitalFingerprint.applySha256( 
+                previousHash +
+                Long.toString(timeStamp) +
+                Integer.toString(nonce) +
+                data 
+                );
+        return calculatedhash;
     }
 }
