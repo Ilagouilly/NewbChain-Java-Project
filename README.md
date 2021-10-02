@@ -1,6 +1,6 @@
 # NewbChain-Java-Project
 
-This Kata is about implementing a Java Blockchain for learning purposes. Applying the following fundumentals of Blockchain, that are:
+This project'sgoal is to implement a Java Blockchain for learning purposes. The following fundumentals of Blockchain will be taken into account:
 
 * Creation of blocks that store data.
 * Generation of a digital signature that chains blocks together.
