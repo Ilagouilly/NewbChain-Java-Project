@@ -1,9 +1,10 @@
 package com.cryptocurrency.newbchain;
 
-/**                                                                                 
- *  Defines the methods required to display information.                             
- */                                                                                   
+import java.util.List;
 
+/**                                                                                 
+ *  Defines the methods required to display information                          
+ */                                                                                   
 public class DisplayInformationImpl implements DisplayInformation {
 
     @Override
@@ -25,4 +26,19 @@ public class DisplayInformationImpl implements DisplayInformation {
 
         System.out.print("\n\nEnd");
     }
+
+    @Override
+    public void displayValidityOfBlockChain(boolean isValid) {
+
+        System.out.print("Checking if the Chain is valid: "+isValid);
+    }
+
+    @Override
+    public void displayAllBlocks(List<Block> newbchain){
+
+        for (Block nb : newbchain) {
+			System.out.println("Block index: " + newbchain.indexOf(nb) + ", Block content: " + nb.toString() + "\n\n");
+		}
+    }
+    
 }
