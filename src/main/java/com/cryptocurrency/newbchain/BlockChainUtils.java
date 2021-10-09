@@ -6,11 +6,15 @@ import java.util.List;
  * This class handles everything related to our BlockChain
  */
 public class BlockChainUtils {
+
+	public static String buildPrefixString(int prefix) {
+		return new String(new char[prefix]).replace('\0', '0');
+	}
     
     public static Boolean checkBlockChain(List<Block> newbchain, int prefix) {
 		Block currentBlock;
 		Block previousBlock;
-		String hashTarget = new String(new char[prefix]).replace('\0', '0');
+		String hashTarget = buildPrefixString(prefix);
 
 		// loop through blockchain to check hashes:
 		for (int i = 1; i < newbchain.size(); i++) {
