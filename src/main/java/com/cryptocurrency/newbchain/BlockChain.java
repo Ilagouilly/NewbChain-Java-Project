@@ -53,6 +53,12 @@ public class BlockChain {
 			}
 		}
 		return true;
-	}    
+	}
+	
+	public void accept(DisplayInformation di) {
 
+        for (Block nb : chain) {
+			di.displaySingleBloc(chain.indexOf(nb), nb);
+		}
+	}
 }
