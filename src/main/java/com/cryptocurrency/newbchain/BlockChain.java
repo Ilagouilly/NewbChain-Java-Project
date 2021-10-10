@@ -1,25 +1,41 @@
 package com.cryptocurrency.newbchain;
 
 import java.util.List;
+import java.util.ArrayList;
 
-/**
- * This class handles everything related to our BlockChain
- */
-public class BlockChainUtils {
+public class BlockChain {
+
+    private List<Block> chain = new ArrayList<>();
+    private static int prefix = 5;
 
 	public static String buildPrefixString(int prefix) {
 		return new String(new char[prefix]).replace('\0', '0');
 	}
+
+    public void addBlock(String blockData) {
+
+        String previousHash = "0"; 
+
+        if(chain.size()>0) {
+            previousHash = chain.get(chain.size() - 1).getHash();
+        }
+        Block block = new Block(blockData, previousHash);
+        chain.add(block);
+
+		System.out.println("block of data : " + blockData + " mining BEGIN");
+		block.mineBlock(prefix);
+		System.out.println("block of data : " + blockData + " mining END");
+    }
     
-    public static Boolean checkBlockChain(List<Block> newbchain, int prefix) {
+    public Boolean check() {
 		Block currentBlock;
 		Block previousBlock;
 		String hashTarget = buildPrefixString(prefix);
 
 		// loop through blockchain to check hashes:
-		for (int i = 1; i < newbchain.size(); i++) {
-			currentBlock = newbchain.get(i);
-			previousBlock = newbchain.get(i - 1);
+		for (int i = 1; i < chain.size(); i++) {
+			currentBlock = chain.get(i);
+			previousBlock = chain.get(i - 1);
 			// compare registered hash and calculated hash:
 			if (!currentBlock.getHash().equals(currentBlock.calculateBlockHash())) {
 				System.out.println("Current Hashes not equal");
@@ -37,5 +53,6 @@ public class BlockChainUtils {
 			}
 		}
 		return true;
-	}
+	}    
+
 }

@@ -19,6 +19,13 @@ public class Main {
 		// Display opening banner
 		displayDataImplSystemOut.displayOpeningBanner();
 
+		BlockChain blockChain = new BlockChain();
+
+		blockChain.addBlock("Thomas sends 1n to Jean-françois");
+		blockChain.addBlock("Jean-françois sends 0.1n to Taqueria el farolito");
+		blockChain.addBlock("José sends 5n to Maria");
+
+		/*
 		Block block1 = new Block("Thomas sends 1n to Jean-françois", "0");
 		block1.mineBlock(prefix);
 		newbchain.add(block1);
@@ -31,12 +38,15 @@ public class Main {
 		Block block3 = new Block("José sends 5n to Maria", newbchain.get(newbchain.size() - 1).getHash());
 		block3.mineBlock(prefix);
 		newbchain.add(block3);
+		*/
 
 		// Display all blocks
-		displayDataImplSystemOut.displayAllBlocks(newbchain);
+		//displayDataImplSystemOut.displayAllBlocks(newbchain);
 
 		// Check and display if the BlockChain is valid
-		displayDataImplSystemOut.displayValidityOfBlockChain(BlockChainUtils.checkBlockChain(newbchain, prefix));
+		//displayDataImplSystemOut.displayValidityOfBlockChain(BlockChainUtils.checkBlockChain(newbchain, prefix));
+		displayDataImplSystemOut.displayValidityOfBlockChain(blockChain.check());
+	
 
 		// Display closing banner
 		displayDataImplSystemOut.displayClosingBanner();

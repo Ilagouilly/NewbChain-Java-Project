@@ -34,11 +34,15 @@ public class DisplayInformationImpl implements DisplayInformation {
     }
 
     @Override
-    public void displayAllBlocks(List<Block> newbchain){
+    public void displayAllBlocks(BlockChain blockchain){
 
+        /*
         for (Block nb : newbchain) {
 			System.out.println("Block index: " + newbchain.indexOf(nb) + ", Block content: " + nb.toString() + "\n\n");
 		}
+        */
+        // to be continued...
+
     }
     
 }
