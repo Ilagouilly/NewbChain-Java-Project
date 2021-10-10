@@ -26,7 +26,7 @@ public class Main {
 		blockChain.addBlock("José sends 5n to Maria");
 
 		// Display all blocks
-		//displayDataImplSystemOut.displayAllBlocks(newbchain);
+		displayDataImplSystemOut.displayAllBlocks(blockChain);
 
 		// Check and display if the BlockChain is valid
 		//displayDataImplSystemOut.displayValidityOfBlockChain(BlockChainUtils.checkBlockChain(newbchain, prefix));
