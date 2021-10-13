@@ -27,7 +27,7 @@ public class Block {
     }
 
     public String mineBlock(int prefix) {
-        String prefixString = new String(new char[prefix]).replace('\0', '0');
+        String prefixString = BlockChain.buildPrefixString(prefix);
         while (!hash.substring(0, prefix).equals(prefixString)) {
             nonce++;
             hash = calculateBlockHash();
