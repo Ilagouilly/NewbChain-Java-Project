@@ -35,7 +35,7 @@ public class Block {
         return hash;
     }
 
-    String calculateBlockHash() {
+    public String calculateBlockHash() {
         String calculatedhash = DigitalSignature.applySha256( 
             previousHash +
             Long.toString(timeStamp) +

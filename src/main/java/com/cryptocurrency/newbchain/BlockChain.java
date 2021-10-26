@@ -21,10 +21,7 @@ public class BlockChain {
         }
         Block block = new Block(blockData, previousHash);
         chain.add(block);
-
-		System.out.println("block of data : " + blockData + " mining BEGIN");
 		block.mineBlock(prefix);
-		System.out.println("block of data : " + blockData + " mining END");
     }
     
     public Boolean check() {
