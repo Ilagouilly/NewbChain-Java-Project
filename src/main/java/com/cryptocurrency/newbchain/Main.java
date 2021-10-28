@@ -30,7 +30,7 @@ public class Main {
 
 		// Check and display if the BlockChain is valid
 		//displayDataImplSystemOut.displayValidityOfBlockChain(BlockChainUtils.checkBlockChain(newbchain, prefix));
-		displayDataImplSystemOut.displayValidityOfBlockChain(blockChain.check());
+		displayDataImplSystemOut.displayValidityOfBlockChain(blockChain);
 	
 
 		// Display closing banner

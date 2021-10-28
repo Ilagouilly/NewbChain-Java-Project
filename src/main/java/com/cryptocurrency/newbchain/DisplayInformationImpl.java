@@ -28,9 +28,9 @@ public class DisplayInformationImpl implements DisplayInformation {
     }
 
     @Override
-    public void displayValidityOfBlockChain(boolean isValid) {
+    public void displayValidityOfBlockChain(BlockChain blockchain) {
 
-        System.out.print("Checking if the Chain is valid: "+isValid);
+        System.out.print("Checking if the Chain is valid: "+ blockchain.check());
     }
 
     @Override
