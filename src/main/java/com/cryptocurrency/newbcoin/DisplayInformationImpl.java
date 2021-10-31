@@ -9,14 +9,14 @@ public class DisplayInformationImpl implements DisplayInformation {
         public void displayOpeningBanner() {
                 StringBuilder builder = new StringBuilder();
                 builder.append("\n");
-                builder.append("                            888b    888                        888       .d8888b.           d8b          ");
-                builder.append("                            8888b   888                        888      d88P  Y88b          Y8P          ");
-                builder.append("                            88888b  888                        888      888    888                       ");
-                builder.append("                            888Y88b 888  .d88b.  888  888  888 88888b.  888         .d88b.  888 88888b.  ");
-                builder.append("                            888 Y88b888 d8P  Y8b 888  888  888 888  88b 888        d88  88b 888 888  88b ");
-                builder.append("                            888  Y88888 88888888 888  888  888 888  888 888    888 888  888 888 888  888 ");
-                builder.append("                            888   Y8888 Y8b.     Y88b 888 d88P 888 d88P Y88b  d88P Y88..88P 888 888  888 ");
-                builder.append("                            888    Y888   Y8888    Y8888888P   88888P     Y8888P     Y88P   888 888  888 \n\n\n");
+                builder.append("                               888b    888                        888       .d8888b.           d8b          \n");
+                builder.append("                               8888b   888                        888      d88P  Y88b          Y8P          \n");
+                builder.append("                               88888b  888                        888      888    888                       \n");
+                builder.append("                               888Y88b 888  .d88b.  888  888  888 88888b.  888         .d88b.  888 88888b.  \n");
+                builder.append("                               888 Y88b888 d8P  Y8b 888  888  888 888  88b 888        d88  88b 888 888  88b \n");
+                builder.append("                               888  Y88888 88888888 888  888  888 888  888 888    888 888  888 888 888  888 \n");
+                builder.append("                               888   Y8888 Y8b.     Y88b 888 d88P 888 d88P Y88b  d88P Y88..88P 888 888  888 \n");
+                builder.append("                               888    Y888   Y8888    Y8888888P   88888P     Y8888P     Y88P   888 888  888 \n\n\n");
 
                 System.out.println(builder.toString());
         }
