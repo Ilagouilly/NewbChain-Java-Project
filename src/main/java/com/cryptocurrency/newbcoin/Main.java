@@ -1,4 +1,4 @@
-package com.cryptocurrency.newbchain;
+package com.cryptocurrency.newbcoin;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +18,11 @@ public class Main {
 
 		// Display opening banner
 		displayDataImplSystemOut.displayOpeningBanner();
+
+		DigitalWallet myWallet = DigitalWallet.getInstance();
+
+		// Display all blocks
+		displayDataImplSystemOut.displayWallet(myWallet);
 
 		Block block1 = new Block("Thomas sends 1n to Jean-françois", "0");
 		block1.mineBlock(prefix);

@@ -1,11 +1,10 @@
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.cryptocurrency.newbchain</groupId>
-    <artifactId>newbchain</artifactId>
+    <groupId>com.cryptocurrency.newbcoin</groupId>
+    <artifactId>newbcoin</artifactId>
     <packaging>jar</packaging>
     <version>1.0.0</version>
-    <name>newbchain</name>
+    <name>newbcoin</name>
     <url>http://maven.apache.org</url>
     <dependencies>
         <dependency>
@@ -19,6 +18,13 @@
             <artifactId>lombok</artifactId>
             <version>1.18.20</version>
             <scope>provided</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.bitcoinj/bitcoinj-core -->
+        <dependency>
+            <groupId>com.google</groupId>
+            <artifactId>bitcoinj</artifactId>
+            <version>0.11.3</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
     <properties>
@@ -49,7 +55,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.cryptocurrency.newbchain.Main</mainClass>
+                            <mainClass>com.cryptocurrency.newbcoin.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

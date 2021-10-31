@@ -16,7 +16,7 @@ mvn clean install
 ## How can I execute the project?
 
 ```
-java -jar target/newbchain-1.0.0.jar
+mvn exec:java -Dexec.mainClass="com.cryptocurrency.newbcoin.Main"
 ```
 
 ## Wanna contribute to this project?

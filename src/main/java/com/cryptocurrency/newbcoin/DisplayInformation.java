@@ -1,4 +1,4 @@
-package com.cryptocurrency.newbchain;
+package com.cryptocurrency.newbcoin;
 
 import java.util.List;
 
@@ -11,4 +11,5 @@ public interface DisplayInformation {
     public void displayClosingBanner();
     public void displayValidityOfBlockChain(boolean isValid);
     public void displayAllBlocks(List<Block> newbchain);
+    public void displayWallet(DigitalWallet myWallet);
 }

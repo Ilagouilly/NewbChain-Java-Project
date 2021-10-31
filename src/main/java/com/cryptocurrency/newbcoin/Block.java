@@ -1,4 +1,4 @@
-package com.cryptocurrency.newbchain;
+package com.cryptocurrency.newbcoin;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -36,12 +36,11 @@ public class Block {
     }
 
     String calculateBlockHash() {
-        String calculatedhash = DigitalSignature.applySha256( 
+        return DigitalSignature.applySha256( 
             previousHash +
             Long.toString(timeStamp) +
             Integer.toString(nonce) +
             data 
             );
-        return calculatedhash;
     }
 }

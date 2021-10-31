@@ -1,4 +1,4 @@
-package com.cryptocurrency.newbchain;
+package com.cryptocurrency.newbcoin;
 
 import java.util.List;
 
