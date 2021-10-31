@@ -7,13 +7,7 @@ This project's goal is to implement a Java Blockchain for learning purposes. The
 * Validation of new blocks by providing a proof of work.
 * Verification that Blocks are valid and data is unchanged.
 
-## How can I compile the project locally?
-
-```
-mvn clean install
-```
-
-## How can I execute the project?
+## How can I compile & execute the project?
 
 ```
 mvn exec:java -Dexec.mainClass="com.cryptocurrency.newbcoin.Main"
@@ -25,7 +19,6 @@ Here are some ideas that could be great additions to this project:
 
 * Creation of a Mock server simulating a certain number of nodes.
 * Handling communication between nodes (HTTP Websockets for example).
-* Wallets management (private & pulic key etc).
 * ... and more ;)
 
 Have fun!

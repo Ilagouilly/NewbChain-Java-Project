@@ -1,7 +1,8 @@
 package com.cryptocurrency.newbcoin;
 
 /**
- * this class contains the minimum instructions required to create and test our crypocurrency.
+ * this class contains the minimum instructions required to create and test our
+ * crypocurrency.
  */
 public class Main {
 
@@ -15,7 +16,7 @@ public class Main {
 		// Display opening banner
 		displayDataImplSystemOut.displayOpeningBanner();
 
-		DigitalWallet myWallet = DigitalWallet.getInstance();
+		NewbCoinWallet myWallet = NewbCoinWallet.getInstance();
 
 		// Display all blocks
 		displayDataImplSystemOut.displayWallet(myWallet);
@@ -33,5 +34,6 @@ public class Main {
 
 		// Display closing banner
 		displayDataImplSystemOut.displayClosingBanner();
+		System.exit(0);
 	}
 }
