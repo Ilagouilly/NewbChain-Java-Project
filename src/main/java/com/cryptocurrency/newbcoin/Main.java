@@ -34,6 +34,8 @@ public class Main {
 
 		// Display closing banner
 		displayDataImplSystemOut.displayClosingBanner();
+
+		// Close the program
 		System.exit(0);
 	}
 }

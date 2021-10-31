@@ -1,6 +1,6 @@
-# NewbChain-Java-Project
+# NewbCoin-Java-Project
 
-This project's goal is to implement a Java Blockchain for learning purposes. The following fundumentals of Blockchain will be taken into account:
+This project's goal is to implement a Java crypto currency for learning purposes. The following fundumentals of Blockchain & BitCoin will be taken into account:
 
 * Creation of blocks that store data.
 * Generation of a digital signature that chains blocks together.
