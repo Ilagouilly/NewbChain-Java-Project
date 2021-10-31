@@ -10,7 +10,7 @@ This project's goal is to implement a Java crypto currency for learning purposes
 ## How can I compile & execute the project?
 
 ```
-mvn compile exec:java -Dexec.mainClass="com.cryptocurrency.newbcoin.Main"
+mvn compile exec:java -Dexec.mainClass=com.cryptocurrency.newbcoin.Main
 ```
 
 ## Wanna contribute to this project?
