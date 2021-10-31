@@ -9,9 +9,6 @@ import org.slf4j.LoggerFactory;
  *  Defines the methods required to display information                          
  */                                                                                   
 public class DisplayInformationImpl implements DisplayInformation {
-
-    private static Logger LOGGER = LoggerFactory.getLogger(DisplayInformationImpl.class);
-    
     
     @Override
     public void displayOpeningBanner() {
