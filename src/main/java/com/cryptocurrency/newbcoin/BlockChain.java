@@ -21,7 +21,7 @@ public class BlockChain {
 
 		String previousHash = "0";
 
-		if (chain.size() > 0) {
+		if (!chain.isEmpty()) {
 			previousHash = chain.get(chain.size() - 1).getHash();
 		}
 		Block block = new Block(blockData, previousHash);
