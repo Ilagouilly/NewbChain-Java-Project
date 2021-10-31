@@ -1,15 +1,12 @@
-package com.cryptocurrency.newbchain;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.cryptocurrency.newbcoin;
 
 /**
- * this class contains the minimum instructions required to create and test our crypocurrency.
+ * this class contains the minimum instructions required to create and test our
+ * crypocurrency.
  */
 public class Main {
 
-	public static List<Block> newbchain = new ArrayList<>();
-	public static int prefix = 5;
+	public static final int PREFIX = 5;
 
 	public static void main(String[] args) {
 
@@ -19,8 +16,12 @@ public class Main {
 		// Display opening banner
 		displayDataImplSystemOut.displayOpeningBanner();
 
-		BlockChain blockChain = new BlockChain();
+		NewbCoinWallet myWallet = NewbCoinWallet.getInstance();
 
+		// Display all blocks
+		displayDataImplSystemOut.displayWallet(myWallet);
+
+		BlockChain blockChain = new BlockChain();
 		blockChain.addBlock("Thomas sends 1n to Jean-françois");
 		blockChain.addBlock("Jean-françois sends 0.1n to Taqueria el farolito");
 		blockChain.addBlock("José sends 5n to Maria");
@@ -29,11 +30,10 @@ public class Main {
 		displayDataImplSystemOut.displayAllBlocks(blockChain);
 
 		// Check and display if the BlockChain is valid
-		//displayDataImplSystemOut.displayValidityOfBlockChain(BlockChainUtils.checkBlockChain(newbchain, prefix));
 		displayDataImplSystemOut.displayValidityOfBlockChain(blockChain);
-	
 
 		// Display closing banner
 		displayDataImplSystemOut.displayClosingBanner();
+		System.exit(0);
 	}
 }

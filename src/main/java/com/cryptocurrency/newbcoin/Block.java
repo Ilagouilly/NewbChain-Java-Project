@@ -1,12 +1,14 @@
-package com.cryptocurrency.newbchain;
+package com.cryptocurrency.newbcoin;
+
+import java.util.Date;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import java.util.Date;
 
 /**
- * This class handles everything related to Blocks that will later constitute a Blockchain.
+ * This class handles everything related to Blocks that will later constitute a
+ * Blockchain.
  */
 @ToString
 @Getter
@@ -36,12 +38,6 @@ public class Block {
     }
 
     public String calculateBlockHash() {
-        String calculatedhash = DigitalSignature.applySha256( 
-            previousHash +
-            Long.toString(timeStamp) +
-            Integer.toString(nonce) +
-            data 
-            );
-        return calculatedhash;
+        return DigitalSignature.applySha256(previousHash + Long.toString(timeStamp) + Integer.toString(nonce) + data);
     }
 }

@@ -1,33 +1,38 @@
-package com.cryptocurrency.newbchain;
+package com.cryptocurrency.newbcoin;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class BlockChain {
 
-    private List<Block> chain = new ArrayList<>();
-    private static int prefix = 5;
+	private List<Block> chain = new ArrayList<>();
+	private static final int PREFIX = 5;
 
 	public static String buildPrefixString(int prefix) {
 		return new String(new char[prefix]).replace('\0', '0');
 	}
 
-    public void addBlock(String blockData) {
+	public void addBlock(String blockData) {
 
-        String previousHash = "0"; 
+		String previousHash = "0";
 
-        if(chain.size()>0) {
-            previousHash = chain.get(chain.size() - 1).getHash();
-        }
-        Block block = new Block(blockData, previousHash);
-        chain.add(block);
-		block.mineBlock(prefix);
-    }
-    
-    public Boolean check() {
+		if (chain.size() > 0) {
+			previousHash = chain.get(chain.size() - 1).getHash();
+		}
+		Block block = new Block(blockData, previousHash);
+		chain.add(block);
+		block.mineBlock(PREFIX);
+	}
+
+	public Boolean check() {
 		Block currentBlock;
 		Block previousBlock;
-		String hashTarget = buildPrefixString(prefix);
+		String hashTarget = buildPrefixString(PREFIX);
 
 		// loop through blockchain to check hashes:
 		for (int i = 1; i < chain.size(); i++) {
@@ -44,17 +49,17 @@ public class BlockChain {
 				return false;
 			}
 			// check if hash is solved
-			if (!currentBlock.getHash().substring(0, prefix).equals(hashTarget)) {
+			if (!currentBlock.getHash().substring(0, PREFIX).equals(hashTarget)) {
 				System.out.println("This block hasn't been mined " + currentBlock.getHash() + " " + hashTarget);
 				return false;
 			}
 		}
 		return true;
 	}
-	
+
 	public void accept(DisplayInformation di) {
 
-        for (Block nb : chain) {
+		for (Block nb : chain) {
 			di.displaySingleBloc(chain.indexOf(nb), nb);
 		}
 	}
