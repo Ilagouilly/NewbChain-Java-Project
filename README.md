@@ -10,7 +10,7 @@ This project's goal is to implement a Java Blockchain for learning purposes. The
 ## How can I compile & execute the project?
 
 ```
-mvn exec:java -Dexec.mainClass="com.cryptocurrency.newbcoin.Main"
+mvn compile exec:java -Dexec.mainClass="com.cryptocurrency.newbcoin.Main"
 ```
 
 ## Wanna contribute to this project?
